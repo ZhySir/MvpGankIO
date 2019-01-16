@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">MvpGankIO</string>
+    <string name="app_name">GankIO</string>
+
+    <string name="could_not_connect_server">无法连接服务器</string>
 </resources>

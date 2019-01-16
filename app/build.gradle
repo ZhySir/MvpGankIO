@@ -1,6 +1,21 @@
 apply plugin: 'com.android.application'
 
+//打包时间
+def static packageTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
 android {
+
+    signingConfigs {
+        release {
+            keyAlias 'gankio'
+            keyPassword '123456'
+            storeFile file('./gankio.jks')
+            storePassword '123456'
+        }
+    }
+
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.zhy.mvpgankio"
@@ -16,6 +31,43 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //强制改变所有引用com.android.support版本为26.0.2
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '26.0.2'
+                }
+            }
+        }
+    }
+
+    //配置打包文件
+    buildTypes {
+        release {
+            //混淆 proguard-android.txt文件是本地sdk/tools/proguard文件夹下的默认文件；prguard-rules.pro文件就是用来编写混淆代码的；
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+    }
+    //配置打包文件
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def fileName = "gankio v${defaultConfig.versionName}_${packageTime()}_${variant.flavorName}.apk"
+            if (variant.buildType.isDebuggable()) {
+                fileName = "gankio v${defaultConfig.versionName}_${packageTime()}_${variant.flavorName}_beta.apk"
+            }
+            outputFileName = fileName
+        }
+    }
+
 }
 
 dependencies {
@@ -29,4 +81,20 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //RxJava+Retrofit+Google Gson+OkHttp
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.7'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    //Glide图片加载
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //常用工具类
+    implementation 'com.github.ZhySir:AndroidLib:1.0.9.4'
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
 }
