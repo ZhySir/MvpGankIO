@@ -72,7 +72,7 @@ public class BaseActivity extends AppCompatActivity implements BaseFuncIml, View
     }
 
     public void openActivity(Class<? extends Activity> toActivity, Bundle parameter) {
-        if (!ClickUtil.isFastDoubleClick()) return;
+        if (ClickUtil.isFastDoubleClick()) return;
         Intent intent = new Intent(this, toActivity);
         if (parameter != null) {
             intent.putExtras(parameter);
@@ -81,7 +81,7 @@ public class BaseActivity extends AppCompatActivity implements BaseFuncIml, View
     }
 
     public void openActivity(Class<?> cls, Bundle bundle, int requestCode) {
-        if (!ClickUtil.isFastDoubleClick()) return;
+        if (ClickUtil.isFastDoubleClick()) return;
         Intent intent = new Intent();
         intent.setClass(this, cls);
         if (bundle != null) {

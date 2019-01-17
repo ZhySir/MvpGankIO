@@ -2,4 +2,15 @@
     <string name="app_name">GankIO</string>
 
     <string name="could_not_connect_server">无法连接服务器</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home">首页</string>
+    <string name="category">分类</string>
+    <string name="welfare">福利</string>
+    <string name="about">关于</string>
+
+    <string name="re_press_Exit">再按一次退出</string>
+
 </resources>

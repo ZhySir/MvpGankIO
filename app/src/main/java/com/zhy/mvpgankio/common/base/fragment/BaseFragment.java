@@ -102,7 +102,7 @@ public class BaseFragment extends Fragment implements BaseFuncIml, View.OnClickL
     }
 
     public void openActivity(Class<? extends Activity> toActivity, Bundle parameter) {
-        if (!ClickUtil.isFastDoubleClick()) return;
+        if (ClickUtil.isFastDoubleClick()) return;
         Intent intent = new Intent(getContext(), toActivity);
         if (parameter != null) {
             intent.putExtras(parameter);
@@ -111,7 +111,7 @@ public class BaseFragment extends Fragment implements BaseFuncIml, View.OnClickL
     }
 
     public void openActivity(Class<?> cls, Bundle bundle, int requestCode) {
-        if (!ClickUtil.isFastDoubleClick()) return;
+        if (ClickUtil.isFastDoubleClick()) return;
         Intent intent = new Intent();
         intent.setClass(getContext(), cls);
         if (bundle != null) {

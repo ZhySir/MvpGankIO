@@ -1,5 +1,11 @@
 package com.zhy.mvpgankio.common.http;
 
+import com.zhy.mvpgankio.category.bean.AllCategoryBean;
+
+import io.reactivex.Observable;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+
 /**
  * service
  * Created by zhy on 2018/5/26.
@@ -12,8 +18,8 @@ public interface HttpService {
     //    @Field：用于POST请求，提交单个数据
     //    @Body：相当于多个@Field，以对象的形式提交
 
-    //首页
-//    @POST("vau/v1/data/home")
-//    Observable<HomeData> getDataHome(@QueryMap HashMap<String, Object> map);
+    //分类数据
+    @POST("/api/data/{category}/{pageSize}/{pageNum}")
+    Observable<AllCategoryBean> getCategoryData(@Path("category") String category, @Path("pageNum") String pageNum, @Path("pageSize") String pageSize);
 
 }

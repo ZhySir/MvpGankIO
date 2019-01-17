@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/black_191919"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/page_Home"
+        style="@style/relativeLayout_frame">
+
+        <RadioButton
+            android:id="@+id/btn_Home"
+            style="@style/MainRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_tab_home"
+            android:text="@string/home" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/page_Category"
+        style="@style/relativeLayout_frame">
+
+        <RadioButton
+            android:id="@+id/btn_Category"
+            style="@style/MainRadioButton"
+            android:drawableTop="@drawable/selector_tab_category"
+            android:text="@string/category" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/page_Welfare"
+        style="@style/relativeLayout_frame">
+
+        <RadioButton
+            android:id="@+id/btn_Welfare"
+            style="@style/MainRadioButton"
+            android:drawableTop="@drawable/selector_tab_welfare"
+            android:text="@string/welfare" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/page_About"
+        style="@style/relativeLayout_frame">
+
+        <RadioButton
+            android:id="@+id/btn_About"
+            style="@style/MainRadioButton"
+            android:drawableTop="@drawable/selector_tab_about"
+            android:text="@string/about" />
+
+    </RelativeLayout>
+
+</LinearLayout>
