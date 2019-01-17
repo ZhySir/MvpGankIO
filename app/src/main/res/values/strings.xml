@@ -13,4 +13,9 @@
 
     <string name="re_press_Exit">再按一次退出</string>
 
+    <string name="android">Android</string>
+    <string name="ios">IOS</string>
+    <string name="front_End">前端</string>
+    <string name="expand_Resources">拓展资源</string>
+
 </resources>

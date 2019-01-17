@@ -46,4 +46,10 @@
         <item name="android:windowBackground">@color/red_d72d2b</item>
     </style>
 
+    <!-- tabLayout自动大写转换小写 -->
+    <style name="TabLayoutTextStyle_Size14" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>
