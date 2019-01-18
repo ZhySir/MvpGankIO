@@ -97,5 +97,7 @@ dependencies {
     implementation 'com.github.ZhySir:AndroidLib:1.0.9.4'
     //EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
+    //WebView
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
 
 }

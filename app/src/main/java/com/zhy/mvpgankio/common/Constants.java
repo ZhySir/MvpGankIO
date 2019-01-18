@@ -17,4 +17,9 @@ public class Constants {
     public static final String MAIN_SHOW_WELFARE = "main_show_welfare";         //显示福利
     public static final String MAIN_SHOW_ABOUT = "main_show_about";             //显示关于
 
+
+    //变量
+    public static final int PAGE_NUM = 1;        //页数
+    public static final int PAGE_SIZE = 20;      //每页数量
+
 }

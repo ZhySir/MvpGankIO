@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitHelper {
 
     private static Retrofit mRetrofit;
-    //..如果多个环境..因此..
+    //..如果多个服务器..因此..
 //    private static Retrofit mRetrofit2;
 
     //获取Retrofit对象

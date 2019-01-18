@@ -3,6 +3,7 @@ package com.zhy.mvpgankio.common.http;
 import com.zhy.mvpgankio.category.bean.AllCategoryBean;
 
 import io.reactivex.Observable;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -19,7 +20,8 @@ public interface HttpService {
     //    @Body：相当于多个@Field，以对象的形式提交
 
     //分类数据
-    @POST("/api/data/{category}/{pageSize}/{pageNum}")
-    Observable<AllCategoryBean> getCategoryData(@Path("category") String category, @Path("pageNum") String pageNum, @Path("pageSize") String pageSize);
-
+    @GET("data/{category}/{size}/{num}")
+    Observable<AllCategoryBean> getCategoryData(@Path("category") String category,
+                                                @Path("num") int pageNum,
+                                                @Path("size") int pageSize);
 }

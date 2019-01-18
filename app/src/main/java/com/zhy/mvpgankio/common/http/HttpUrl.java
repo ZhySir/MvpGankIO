@@ -10,6 +10,6 @@ public class HttpUrl {
     public static boolean official = true;
 
     //GankIO API
-    public static String BaseUrl = official ? "https://gank.io/api" : "";
+    public static String BaseUrl = official ? "https://gank.io/api/" : "";
 
 }
