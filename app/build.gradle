@@ -97,6 +97,9 @@ dependencies {
     implementation 'com.github.ZhySir:AndroidLib:1.0.9.4'
     //EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
+    //下拉刷新SmartRefreshLayout
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-19'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-19'
     //WebView
     implementation 'com.github.lzyzsd:jsbridge:1.0.4'
 

@@ -17,28 +17,28 @@ import com.zhy.mvpgankio.common.utils.DateUtil;
 import java.util.List;
 
 /**
- * Android知识模块Adapter
+ * Category模块Adapter
  * Created by zhy on 2019/1/18.
  */
 
-public class AndroidAdapter extends RecyclerView.Adapter<AndroidAdapter.AndroidViewHolder> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
 
     private Context mContext;
     private List<AllCategoryBean.ResultsBean> mList;
 
-    public AndroidAdapter(Context mContext, List<AllCategoryBean.ResultsBean> mList) {
+    public CategoryAdapter(Context mContext, List<AllCategoryBean.ResultsBean> mList) {
         this.mContext = mContext;
         this.mList = mList;
     }
 
     @Override
-    public AndroidViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_android, parent, false);
-        return new AndroidViewHolder(view);
+    public CategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_category, parent, false);
+        return new CategoryViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(AndroidViewHolder holder, final int position) {
+    public void onBindViewHolder(CategoryViewHolder holder, final int position) {
         AllCategoryBean.ResultsBean resultsBean = mList.get(position);
         holder.tvTitle.setText(resultsBean.getDesc());
         holder.tvTime.setText(DateUtil.getUTCYMD(resultsBean.getCreatedAt()));
@@ -70,12 +70,12 @@ public class AndroidAdapter extends RecyclerView.Adapter<AndroidAdapter.AndroidV
         return mList != null ? mList.size() : 0;
     }
 
-    public class AndroidViewHolder extends RecyclerView.ViewHolder {
+    public class CategoryViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle;
         TextView tvTime;
         ImageView ivIMG;
 
-        public AndroidViewHolder(View itemView) {
+        public CategoryViewHolder(View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tv_Title);
             tvTime = itemView.findViewById(R.id.tv_Time);

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.zhy.libutils.LogUtil;
 import com.zhy.libviews.tabLayout.TabLayout;
 import com.zhy.mvpgankio.R;
 import com.zhy.mvpgankio.category.fragment.android.AndroidFragment;
@@ -48,6 +49,7 @@ public class CategoryFragment extends BaseFragment {
     @Override
     public void initParam() {
         super.initParam();
+
         fragmentList.add(new AndroidFragment());
         fragmentList.add(new IosFragment());
         fragmentList.add(new FrontEndFragment());

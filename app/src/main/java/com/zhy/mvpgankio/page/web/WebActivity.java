@@ -111,12 +111,20 @@ public class WebActivity extends BaseActivity {
                     view.clearHistory();//清除历史记录
                 }
             }
+
+            //url加载完成
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                hideNetDialog();
+            }
         });
     }
 
     @Override
     public void initData() {
         super.initData();
+        showNetDialog();
         switch (type) {
             case 1:
                 tvTitle.setText(bundle.getString("title"));

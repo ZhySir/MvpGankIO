@@ -22,6 +22,8 @@ public interface AndroidContract {
     interface View extends BaseView {
         void onRefreshPage(List<AllCategoryBean.ResultsBean> list,
                            int type);
+
+        void onLoadMorePage(List<AllCategoryBean.ResultsBean> list);
     }
 
     abstract class Presenter extends BasePresenter<Model, View> {
