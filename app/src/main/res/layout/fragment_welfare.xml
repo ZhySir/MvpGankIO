@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_151d26"
     android:orientation="vertical"
     tools:context="com.zhy.mvpgankio.welfare.WelfareFragment">
 
@@ -15,9 +16,20 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
+            android:text="@string/welfare"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:text="@string/welfare" />
+            android:textSize="16sp" />
     </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefreshLayout_Welfare"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.libviews.recyclerView.MyRecyclerView
+            android:id="@+id/mRecyclerView_Welfare"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </LinearLayout>

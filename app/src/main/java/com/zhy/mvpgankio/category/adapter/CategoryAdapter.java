@@ -17,7 +17,7 @@ import com.zhy.mvpgankio.common.utils.DateUtil;
 import java.util.List;
 
 /**
- * Category模块Adapter
+ * 分类模块Adapter
  * Created by zhy on 2019/1/18.
  */
 

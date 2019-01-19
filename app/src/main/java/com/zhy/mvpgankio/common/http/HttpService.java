@@ -1,6 +1,7 @@
 package com.zhy.mvpgankio.common.http;
 
 import com.zhy.mvpgankio.category.bean.AllCategoryBean;
+import com.zhy.mvpgankio.welfare.bean.AllWelfareBean;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -24,4 +25,11 @@ public interface HttpService {
     Observable<AllCategoryBean> getCategoryData(@Path("category") String category,
                                                 @Path("num") int pageNum,
                                                 @Path("size") int pageSize);
+
+    //福利数据
+    @GET("data/{welfare}/{size}/{num}")
+    Observable<AllWelfareBean> getWelfareData(@Path("welfare") String category,
+                                              @Path("num") int pageNum,
+                                              @Path("size") int pageSize);
+
 }
