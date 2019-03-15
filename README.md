@@ -9,18 +9,18 @@
 | 首页 | 分类 | 福利 | 关于 |
   
 ## 框架搭建  
-> 网络框架：RxJava、Retrofit、Gson、okHttp
-> 图片框架：Glide
-> 刷新框架：SmartRefreshLayout
+> 网络框架：RxJava、Retrofit、Gson、okHttp  
+> 图片框架：Glide  
+> 刷新框架：SmartRefreshLayout  
 > ...
   
 ## 扫码下载  
 ![扫码下载](https://github.com/ZhySir/PictureLib/blob/master/mvpGankIO/gankio_download_qr_code.png)
   
 ## 关于我  
-爱编程，爱晚起，偶尔也忙到深夜
-喜欢学习，努力工作，也享受生活
-我酷爱技术，崇尚简单的快乐和幸福
-我不是码农，我是程序员
-我和你一样，为理想而奋斗
+爱编程，爱晚起，偶尔也忙到深夜  
+喜欢学习，努力工作，也享受生活  
+我酷爱技术，崇尚简单的快乐和幸福  
+我不是码农，我是程序员  
+我和你一样，为理想而奋斗  
 * Blog：[https://zhysir.github.io/](https://zhysir.github.io/)
