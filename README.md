@@ -9,6 +9,7 @@
 | 首页 | 分类 | 福利 | 关于 |
   
 ## 扫一扫  
-xxx  
+![扫码下载](https://github.com/ZhySir/PictureLib/blob/master/mvpGankIO/gankio_download_qr_code.png)
+  
 ## 关于我  
 xxx
