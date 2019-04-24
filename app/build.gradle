@@ -94,8 +94,8 @@ dependencies {
     //Glide图片加载
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
-    //常用工具类
-    implementation 'com.github.ZhySir:AndroidLib:1.0.9.4'
+    //常用工具类 https://github.com/ZhySir/AndroidLib
+    implementation 'com.github.ZhySir:AndroidLib:1.0.9.5'
     //EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
     //下拉刷新SmartRefreshLayout
