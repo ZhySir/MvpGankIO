@@ -1,4 +1,4 @@
-package com.zhy.mvpgankio.welfare.fragment.main;
+package com.zhy.mvpgankio.welfare;
 
 import com.zhy.mvpgankio.common.base.rx.BaseObserver;
 import com.zhy.mvpgankio.welfare.bean.AllWelfareBean;

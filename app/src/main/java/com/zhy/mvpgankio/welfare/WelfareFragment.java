@@ -8,8 +8,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -17,15 +15,11 @@ import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.zhy.libviews.recyclerView.MyRecyclerView;
 import com.zhy.mvpgankio.R;
-import com.zhy.mvpgankio.common.base.fragment.BaseFragment;
 import com.zhy.mvpgankio.common.base.fragment.BaseFrameFragment;
 import com.zhy.mvpgankio.common.utils.ToastUtil;
 import com.zhy.mvpgankio.common.view.StaggeredDividerItemDecoration;
 import com.zhy.mvpgankio.welfare.adapter.WelfareAdapter;
 import com.zhy.mvpgankio.welfare.bean.AllWelfareBean;
-import com.zhy.mvpgankio.welfare.fragment.main.WelfareContract;
-import com.zhy.mvpgankio.welfare.fragment.main.WelfareModel;
-import com.zhy.mvpgankio.welfare.fragment.main.WelfarePresenter;
 
 import java.util.ArrayList;
 import java.util.List;

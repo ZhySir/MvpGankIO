@@ -1,4 +1,4 @@
-package com.zhy.mvpgankio.welfare.fragment.main;
+package com.zhy.mvpgankio.home;
 
 import com.zhy.mvpgankio.common.base.mvp.BaseModel;
 import com.zhy.mvpgankio.common.base.mvp.BasePresenter;
@@ -9,10 +9,9 @@ import com.zhy.mvpgankio.welfare.bean.AllWelfareBean;
 import java.util.List;
 
 /**
- * Created by zhy on 2019/1/19.
+ * Created by zhy on 2019/5/8.
  */
-
-public interface WelfareContract {
+public interface HomeContract {
 
     interface Model extends BaseModel {
         void getWelfareData(String category, int pageNum, int pageSize,
@@ -20,15 +19,12 @@ public interface WelfareContract {
     }
 
     interface View extends BaseView {
-        void onRefreshPage(List<AllWelfareBean.ResultsBean> list,
-                           int type);
+        void onWelfareData(List<AllWelfareBean.ResultsBean> list);
 
-        void onLoadMorePage(List<AllWelfareBean.ResultsBean> list);
     }
 
     abstract class Presenter extends BasePresenter<Model, View> {
-        public abstract void getWelfareData(String welfare, int pageNum, int pageSize,
-                                            int type);
+        public abstract void getWelfareData(String category, int pageNum, int pageSize);
     }
 
 }
