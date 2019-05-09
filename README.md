@@ -9,7 +9,7 @@
 | 首页 | 分类 | 福利 | 关于 |
   
 ## 框架搭建  
-> 网络框架：RxJava、Retrofit、Gson、okHttp  
+> 网络框架：RxJava、Retrofit、Gson、OkHttp  
 > 图片框架：Glide  
 > 刷新框架：SmartRefreshLayout  
 > ...
